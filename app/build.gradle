@@ -4,8 +4,8 @@ plugins {
 
 android {
     def appName = "AppName"
-    def date1 = new Date()
-    def formattedDate1 = date1.format('yyyyMMdd.HHmmss')
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMdd.HHmmss')
 
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -29,7 +29,7 @@ android {
                 variant.outputs.all {
                     def flavor = variant.name
                     def versionName = variant.versionName
-                    outputFileName = "${appName}_${versionName}.${formattedDate1}_${flavor}.apk"
+                    outputFileName = "${appName}_${versionName}.${formattedDate}_${flavor}.apk"
                 }
             }
         }
@@ -41,7 +41,7 @@ android {
                 variant.outputs.all {
                     def flavor = variant.name
                     def versionName = variant.versionName
-                    outputFileName = "${appName}_${versionName}.${formattedDate1}_${flavor}.apk"
+                    outputFileName = "${appName}_${versionName}.${formattedDate}_${flavor}.apk"
                 }
             }
         }
